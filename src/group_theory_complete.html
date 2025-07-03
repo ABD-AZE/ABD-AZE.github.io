@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Group Theory</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      line-height: 1.7;
+    }
+    h1, h2, h3 {
+      color: #333366;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 1rem;
+      overflow-x: auto;
+    }
+    code {
+      background: #eee;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<h1>Group Theory</h1>
+
+<p>To understand zero-knowledge proofs, a solid grasp of abstract algebra is essential. This blog will provide a concise yet comprehensive overview of the key concepts in abstract algebra, equipping you with the foundational knowledge needed to begin exploring zero-knowledge proofs. By covering the basics in a clear and accessible manner, this guide will help you build the necessary skills to delve deeper into the fascinating world of cryptographic proofs.</p>
+
+<p>Before diving into the deep realms of abstract algebra it is necessary that we revisit some definitions from set theory. Set theory is essential for understanding zero-knowledge proofs because it forms the foundation of abstract algebra. Abstract algebra relies heavily on set theory to define and manipulate the structures used in cryptographic proofs. This foundational knowledge ensures a clear understanding of the terminology and concepts necessary for practical applications in zero-knowledge proofs.</p>
+
+<h2>Set Theory Terms</h2>
+<ul>
+  <li><strong>Set:</strong> A collection of different things such as numbers, symbols, shapes, etc.</li>
+  <li><strong>Subset:</strong> A set S1 where all elements also belong to set S.</li>
+  <li><strong>Superset:</strong> A set S2 that contains all elements of another set S.</li>
+  <li><strong>Cardinality:</strong> The number of elements in a set.</li>
+  <li><strong>Ordered Pair:</strong> (a, b) is different from (b, a); represented by {a, {b}}.</li>
+  <li><strong>Cartesian Product:</strong> \( A \times B = \{(a, b) \mid a \in A, b \in B\} \)</li>
+  <li><strong>Relation:</strong> A subset of a Cartesian product.</li>
+  <li><strong>Function:</strong> A relation where each input has exactly one output.</li>
+</ul>
+
+<h2>Binary Operator</h2>
+<p>A binary operator ⊗ combines two elements from a set and returns another element of the same set, i.e., ⊗: A × A → A. For example, fusing shapes (Circle, Square) to get Ellipse, etc.</p>
+
+<h2>Properties of Binary Operators</h2>
+<ul>
+  <li><strong>Closure:</strong> Result remains in the same set.</li>
+  <li><strong>Commutativity:</strong> a ⊗ b = b ⊗ a</li>
+  <li><strong>Associativity:</strong> a ⊗ (b ⊗ c) = (a ⊗ b) ⊗ c</li>
+</ul>
+
+<h2>Hierarchy of Algebraic Structures</h2>
+<ul>
+  <li><strong>Magma:</strong> Set + Closure</li>
+  <li><strong>Semigroup:</strong> + Associativity</li>
+  <li><strong>Monoid:</strong> + Identity element</li>
+  <li><strong>Group:</strong> + Inverses</li>
+  <li><strong>Abelian Group:</strong> + Commutativity</li>
+</ul>
+
+<h2>Group Axioms</h2>
+<ul>
+  <li>(G1) Closure</li>
+  <li>(G2) Associativity</li>
+  <li>(G3) Identity element: \( a \star e = e \star a = a \)</li>
+  <li>(G4) Inverse element: \( a \star a^{-1} = e \)</li>
+</ul>
+
+<h2>Examples of Groups</h2>
+<h3>1. 2D Points Under Addition</h3>
+<ul>
+  <li>Binary op: (x1,y1) + (x2,y2) = (x1+x2, y1+y2)</li>
+  <li>Identity: (0,0)</li>
+  <li>Inverse: (-x, -y)</li>
+</ul>
+
+<h3>2. Integers mod 7 under Addition</h3>
+<ul>
+  <li>Identity = 0</li>
+  <li>Inverse of 5 is 2 since 5 + 2 ≡ 0 (mod 7)</li>
+</ul>
+
+<h2>Non-Groups</h2>
+<ul>
+  <li>Multiplication mod prime: zero has no inverse</li>
+  <li>Cross product in R²: undefined</li>
+</ul>
+
+<h2>Group Definitions</h2>
+<ul>
+  <li><strong>Finite group:</strong> Set with finite elements</li>
+  <li><strong>Order:</strong> Number of elements</li>
+  <li><strong>Cyclic group:</strong> All elements are powers of one element</li>
+  <li><strong>Note:</strong> All cyclic groups are abelian</li>
+</ul>
+
+<h2>Group Homomorphism</h2>
+<p>Let \( \phi: G \to H \) be a homomorphism if:</p>
+<p>\( \phi(g \star g') = \phi(g) \circ \phi(g') \)</p>
+
+<h3>Example 1: Z to R*</h3>
+<p>\( \phi(n) = 2^n \) maps addition to multiplication</p>
+
+<h3>Example 2: C* to R</h3>
+<p>\( \phi(z) = \ln|z| \) maps multiplication to addition</p>
+
+<p>Watch: <a href="https://youtu.be/mvmuCPvRoWQ?si=q5EIYT5v9y2GX4_1" target="_blank">Euler’s Identity Homomorphism Video</a></p>
+
+<h2>Practice Questions</h2>
+<ol>
+  <li>Prove or disprove: A × B = B × A</li>
+  <li>Find subsets with only primes in {1,2,5,6,10,101,4040,2210,3490,100000007}</li>
+  <li>Match functions to phenomena: linear, quadratic, exponential, logarithmic</li>
+  <li>Prove that every cyclic group is abelian</li>
+  <li>Do polynomials under addition form a group? Under multiplication?</li>
+  <li>Does the set of integer vectors satisfying ax + by = 0 form a cyclic group?</li>
+</ol>
+
+<p><strong>Congratulations!</strong> You are now well equipped to explore zero-knowledge proofs.</p>
+
+</body>
+</html>
