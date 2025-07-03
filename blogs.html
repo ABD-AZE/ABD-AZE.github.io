@@ -29,6 +29,11 @@
           <a href="projects.html" class="nav-link">Projects</a>
           <a href="blogs.html" class="nav-link active">Blog</a>
         </div>
+        <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </nav>
     <section class="terminal-hero" id="hero">
@@ -112,6 +117,24 @@
       window.onload = function () {
         typeWriter();
       };
+
+      // Mobile menu toggle
+      const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      mobileMenuToggle.addEventListener("click", function () {
+        mobileMenuToggle.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Close mobile menu when clicking on a link
+      const navLinksItems = document.querySelectorAll(".nav-link");
+      navLinksItems.forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileMenuToggle.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
     </script>
   </body>
 </html>
