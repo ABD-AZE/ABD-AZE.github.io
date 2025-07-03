@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Abdullah Azeem | Blogs</title>
+    <title>Abdullah Azeem | Projects</title>
     <link
       rel="stylesheet"
       href="https://www.uncon.net/MesloLGSNF-web-fonts/stylesheet.css"
@@ -26,8 +26,8 @@
         <div class="nav-links">
           <a href="index.html#about-contact" class="nav-link">About</a>
           <a href="index.html#contact-section" class="nav-link">Contact</a>
-          <a href="projects.html" class="nav-link">Projects</a>
-          <a href="blogs.html" class="nav-link active">Blog</a>
+          <a href="projects.html" class="nav-link active">Projects</a>
+          <a href="blogs.html" class="nav-link">Blog</a>
         </div>
       </div>
     </nav>
@@ -38,7 +38,7 @@
           <span class="dot yellow"></span>
           <span class="dot green"></span>
         </div>
-        <div class="terminal-content hero-content"><span class="prompt">abdaze@home:~/blogs$ </span
+        <div class="terminal-content hero-content"><span class="prompt">abdaze@home:~/projects$ </span
           ><span id="typed-welcome"></span><span class="cursor"> </span>
         </div>
       </div>
@@ -46,40 +46,50 @@
     <main id="main-content">
       <div class="container">
         <section class="content-section">
-          <div class="blogs-section">
-            <h1 class="section-title">My Blogs</h1>
-            <div class="blog-grid">
-              <div class="blog-item">
-                <a href="#" class="blog-link"
-                  >How to Build a Terminal Portfolio Website</a
-                >
-                <span class="blog-date">June 15, 2025</span>
-                <p class="blog-description">
-                  A comprehensive guide to creating a cyberpunk-themed portfolio
-                  using HTML, CSS, and JavaScript with terminal aesthetics.
+          <div class="projects-section">
+            <h1 class="section-title">My Projects</h1>
+            <div class="project-grid">
+              <div class="project-item">
+                <a href="#" class="project-link">Terminal Portfolio Website</a>
+                <span class="project-tech">HTML, CSS, JavaScript</span>
+                <p class="project-description">
+                  A cyberpunk-themed portfolio website with terminal aesthetics,
+                  featuring typing animations and neon color schemes.
                 </p>
               </div>
-              <div class="blog-item">
-                <a href="#" class="blog-link"
-                  >Zero Knowledge Proofs: A Gentle Introduction</a
+              <div class="project-item">
+                <a href="#" class="project-link"
+                  >Blockchain Transaction Tracker</a
                 >
-                <span class="blog-date">May 10, 2025</span>
-                <p class="blog-description">
-                  Understanding the fundamentals of zero-knowledge cryptography
-                  and its applications in modern blockchain technology.
+                <span class="project-tech">Python, Web3.py, Flask</span>
+                <p class="project-description">
+                  A real-time blockchain transaction monitoring system with
+                  advanced analytics and visualization capabilities.
                 </p>
               </div>
-              <div class="blog-item">
-                <a href="#" class="blog-link"
-                  >Competitive Programming Tips for Beginners</a
+              <div class="project-item">
+                <a href="#" class="project-link"
+                  >Zero Knowledge Proof Library</a
                 >
-                <span class="blog-date">April 1, 2025</span>
-                <p class="blog-description">
-                  Essential strategies and techniques to excel in competitive
-                  programming contests and improve problem-solving skills.
+                <span class="project-tech">Rust, Cryptography</span>
+                <p class="project-description">
+                  A comprehensive library implementing various zero-knowledge
+                  proof protocols for privacy-preserving applications.
                 </p>
               </div>
-              <!-- Add more blog entries here -->
+              <div class="project-item">
+                <a href="#" class="project-link"
+                  >Competitive Programming Solutions</a
+                >
+                <span class="project-tech"
+                  >C++, Algorithms, Data Structures</span
+                >
+                <p class="project-description">
+                  A collection of optimized solutions to competitive programming
+                  problems from various platforms like Codeforces and AtCoder.
+                </p>
+              </div>
+              <!-- Add more project entries here -->
             </div>
           </div>
         </section>
@@ -87,7 +97,7 @@
     </main>
     <script>
       // Typing effect for welcome message
-      const welcomeMessage = "Welcome to my blog archive!";
+      const welcomeMessage = "Check out my latest projects!";
       let i = 0;
       let isTypingWelcome = true;
 
@@ -100,7 +110,6 @@
         } else if (isTypingWelcome && i >= welcomeMessage.length) {
           isTypingWelcome = false;
           i = 0;
-          document.getElementById("typed-welcome").innerHTML += "<br>";
           setTimeout(typeWriter, 300);
         } else if (!isTypingWelcome) {
           // Animation complete, cursor can continue blinking

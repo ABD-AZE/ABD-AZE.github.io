@@ -7,6 +7,7 @@
   --neon-green: #39ff14;
   --neon-blue: #00e6ff;
   --neon-purple: #a259ff;
+  --neon-orange: #ff6b35;
   --text: #e0e0e0;
   --accent: var(--neon-green);
   --shadow: 0 0 16px 2px var(--accent);
@@ -445,12 +446,13 @@ footer {
 }
 
 .social-icons a[title="GitHub"] {
-  border-color: rgba(51, 51, 51, 0.3);
+  border-color: rgba(65, 65, 65, 0.3);
+  color: white;
 }
 .social-icons a[title="GitHub"]:hover {
-  background: #24292e;
-  border-color: #6cc644;
-  color: #6cc644;
+  background: #14171a;
+  border-color: white;
+  color: white;
 }
 
 .social-icons a[title="X"] {
@@ -471,10 +473,10 @@ footer {
   color: white;
 }
 
-.social-icons a[title="Discord"] {
+.social-icons a[title="abdaze"] {
   border-color: rgba(88, 101, 242, 0.3);
 }
-.social-icons a[title="Discord"]:hover {
+.social-icons a[title="abdaze"]:hover {
   background: #5865f2;
   border-color: #5865f2;
   color: white;
@@ -627,8 +629,8 @@ main {
 }
 
 .blog-link:hover {
-  color: var(--neon-blue);
-  text-decoration: underline;
+  color: #6cf845;
+  transform: translateY(-3px);
 }
 
 .blog-date {
@@ -648,22 +650,122 @@ main {
   opacity: 0.9;
 }
 
-/* Responsive Blog Layout */
+/* Projects Section Styles */
+.projects-section {
+  margin-bottom: 5rem;
+}
+
+.project-grid {
+  display: grid;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.project-item {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(126, 198, 153, 0.2);
+  transition: all 0.3s ease;
+}
+
+.project-item:last-child {
+  border-bottom: none;
+}
+
+.project-item:hover {
+  padding-left: 1rem;
+  border-left: 3px solid var(--neon-green);
+}
+
+.project-link {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--neon-green);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  font-family: "MesloLGS NF", monospace;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #6cf845;
+  transform: translateY(-3px);
+}
+
+.project-tech {
+  font-size: 0.9rem;
+  color: var(--neon-blue);
+  font-family: "MesloLGS NF", monospace;
+  display: block;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+  font-weight: 600;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  opacity: 0.9;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-btn {
+  padding: 0.5rem 1rem;
+  background: rgba(126, 198, 153, 0.1);
+  border: 1px solid rgba(126, 198, 153, 0.3);
+  border-radius: 6px;
+  color: var(--neon-green);
+  text-decoration: none;
+  font-family: "MesloLGS NF", monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+  background: rgba(126, 198, 153, 0.2);
+  border-color: var(--neon-green);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Blog and Projects Layout */
 @media (max-width: 768px) {
-  .blog-grid {
+  .blog-grid,
+  .project-grid {
     gap: 2rem;
   }
 
-  .blog-item {
+  .blog-item,
+  .project-item {
     padding: 1.5rem 0;
   }
 
-  .blog-link {
+  .blog-link,
+  .project-link {
     font-size: 1.2rem;
   }
 
-  .blog-description {
+  .blog-description,
+  .project-description {
     font-size: 1rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .project-btn {
+    text-align: center;
   }
 
   .terminal-window,

@@ -27,6 +27,7 @@
         <div class="nav-links">
           <a href="#about-contact" class="nav-link">About</a>
           <a href="#contact-section" class="nav-link">Contact</a>
+          <a href="projects.html" class="nav-link">Projects</a>
           <a href="blogs.html" class="nav-link">Blog</a>
         </div>
       </div>
@@ -41,7 +42,7 @@
           <span class="dot green"></span>
         </div>
         <div class="terminal-content hero-content"><span class="prompt">abdaze@home:~$ </span
-          ><span id="typed-name"></span>
+          ><span id="typed-name"></span><span class="cursor"> </span>
         </div>
       </div>
       <div
@@ -108,7 +109,7 @@
               </div>
               <div class="contact-item">
                 <i class="fas fa-phone"></i>
-                <a href="tel:8791162879">8791162879</a>
+                <a href="tel:+918791162879">+91 8791162879</a>
               </div>
             </div>
             <div class="social-icons">
@@ -119,25 +120,14 @@
               >
                 <i class="fab fa-github"></i>
               </a>
-              <a href="https://x.com/abdullahazeem77" target="_blank" title="X">
+              <a href="https://x.com/0xabdaze" target="_blank" title="X">
                 <i class="fab fa-x-twitter"></i>
               </a>
-              <a
-                href="https://t.me/abdullahazeem77"
-                target="_blank"
-                title="Telegram"
-              >
-                <i class="fab fa-telegram"></i>
-              </a>
-              <a
-                href="https://discord.com/users/abdullahazeem77"
-                target="_blank"
-                title="Discord"
-              >
+              <a onclick="copyDiscordUsername(event)" title="abdaze">
                 <i class="fab fa-discord"></i>
               </a>
               <a
-                href="https://www.linkedin.com/in/abdullahazeem77/"
+                href="https://www.linkedin.com/in/abdullah-azeem-20a7b9285/"
                 target="_blank"
                 title="LinkedIn"
               >
@@ -158,12 +148,11 @@
         if (isTypingGreeting && i < greeting.length) {
           document.getElementById("typed-name").innerHTML += greeting.charAt(i);
           i++;
-          setTimeout(typeWriter, 50);
+          setTimeout(typeWriter, 100);
         } else if (isTypingGreeting && i >= greeting.length) {
           isTypingGreeting = false;
           i = 0;
-          document.getElementById("typed-name").innerHTML += "<br>";
-          setTimeout(typeWriter, 200);
+          setTimeout(typeWriter, 300);
         } else if (!isTypingGreeting) {
           // Animation complete, cursor can continue blinking
           console.log("Typing animation complete");
@@ -174,6 +163,20 @@
       window.onload = function () {
         typeWriter();
       };
+
+      // Copy Discord username to clipboard
+      function copyDiscordUsername(event) {
+        event.preventDefault();
+        const discordUsername = "abdaze"; // Replace with your actual Discord username
+        navigator.clipboard.writeText(discordUsername).then(
+          function () {
+            alert("Discord username copied to clipboard!");
+          },
+          function (err) {
+            alert("Failed to copy Discord username.");
+          }
+        );
+      }
     </script>
   </body>
 </html>
