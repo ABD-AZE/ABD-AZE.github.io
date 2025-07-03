@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Geek Terminal</title>
+  <!-- MesloLGS NF Web Font -->
+  <link rel="stylesheet" href="https://www.uncon.net/MesloLGSNF-web-fonts/stylesheet.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #181818;
+      color: #c0c0c0;
+      font-family: 'MesloLGS NF', monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .terminal-window {
+      background: #222;
+      border-radius: 8px;
+      box-shadow: 0 0 32px #000a;
+      padding: 2rem 2.5rem;
+      min-width: 480px;
+      min-height: 320px;
+      max-width: 90vw;
+      max-height: 80vh;
+      overflow: auto;
+      border: 2px solid #333;
+    }
+    .terminal-header {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .terminal-header .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .dot.red { background: #ff5f56; }
+    .dot.yellow { background: #ffbd2e; }
+    .dot.green { background: #27c93f; }
+    .terminal-content {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+    .prompt {
+      color: #7ec699;
+    }
+    .cursor {
+      display: inline-block;
+      width: 0.7em;
+      background: #c0c0c0;
+      animation: blink 1s steps(2, start) infinite;
+      margin-left: 2px;
+    }
+    @keyframes blink {
+      to { background: transparent; }
+    }
+    a {
+      color: #61afef;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="terminal-window">
+    <div class="terminal-header">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+    </div>
+    <div class="terminal-content">
+      <span class="prompt">geek@web:~$</span> Welcome to my computer geek website!<br>
+      <span class="prompt">geek@web:~$</span> <span class="cursor"></span>
+    </div>
+  </div>
+</body>
+</html>

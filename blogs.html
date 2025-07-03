@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Abdullah Azeem | Blogs</title>
+    <link
+      rel="stylesheet"
+      href="https://www.uncon.net/MesloLGSNF-web-fonts/stylesheet.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="nav-brand">
+          <a href="index.html" class="nav-brand-link">
+            <i class="fa fa-home" aria-hidden="true"></i> abdaze
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html#about-contact" class="nav-link">About</a>
+          <a href="index.html#contact-section" class="nav-link">Contact</a>
+          <a href="blogs.html" class="nav-link active">Blog</a>
+        </div>
+      </div>
+    </nav>
+    <section class="terminal-hero" id="hero">
+      <div class="terminal-window hero-window">
+        <div class="terminal-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <div class="terminal-content hero-content"><span class="prompt">abdaze@home:~/blogs$ </span
+          ><span id="typed-welcome"></span><span class="cursor"></span>
+        </div>
+      </div>
+    </section>
+    <main id="main-content">
+      <div class="container">
+        <section class="content-section">
+          <div class="blogs-section">
+            <h1 class="section-title">All Blogs</h1>
+            <div class="blog-grid">
+              <div class="blog-item">
+                <a href="#" class="blog-link"
+                  >How to Build a Terminal Portfolio Website</a
+                >
+                <span class="blog-date">June 15, 2025</span>
+                <p class="blog-description">
+                  A comprehensive guide to creating a cyberpunk-themed portfolio
+                  using HTML, CSS, and JavaScript with terminal aesthetics.
+                </p>
+              </div>
+              <div class="blog-item">
+                <a href="#" class="blog-link"
+                  >Zero Knowledge Proofs: A Gentle Introduction</a
+                >
+                <span class="blog-date">May 10, 2025</span>
+                <p class="blog-description">
+                  Understanding the fundamentals of zero-knowledge cryptography
+                  and its applications in modern blockchain technology.
+                </p>
+              </div>
+              <div class="blog-item">
+                <a href="#" class="blog-link"
+                  >Competitive Programming Tips for Beginners</a
+                >
+                <span class="blog-date">April 1, 2025</span>
+                <p class="blog-description">
+                  Essential strategies and techniques to excel in competitive
+                  programming contests and improve problem-solving skills.
+                </p>
+              </div>
+              <!-- Add more blog entries here -->
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script>
+      // Typing effect for welcome message
+      const welcomeMessage = "Welcome to my blog archive!";
+      let i = 0;
+      let isTypingWelcome = true;
+
+      function typeWriter() {
+        if (isTypingWelcome && i < welcomeMessage.length) {
+          document.getElementById("typed-welcome").innerHTML +=
+            welcomeMessage.charAt(i);
+          i++;
+          setTimeout(typeWriter, 50);
+        } else if (isTypingWelcome && i >= welcomeMessage.length) {
+          isTypingWelcome = false;
+          i = 0;
+          document.getElementById("typed-welcome").innerHTML += "<br>";
+          setTimeout(typeWriter, 200);
+        } else if (!isTypingWelcome) {
+          // Animation complete, cursor can continue blinking
+          console.log("Typing animation complete");
+          // Enable scrolling after animation is complete
+          document.body.style.overflow = "auto";
+        }
+      }
+      window.onload = function () {
+        typeWriter();
+      };
+    </script>
+  </body>
+</html>
