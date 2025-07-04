@@ -23,5 +23,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "react-portfolio/src/App.tsx"]
+  "include": ["src"]
 }

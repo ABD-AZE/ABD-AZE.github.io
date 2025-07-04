@@ -321,37 +321,80 @@ main {
 }
 
 /* About Section */
-.info-grid {
-  display: grid;
-  gap: 1.8rem;
-}
-
-.info-item {
+.about-content {
   display: flex;
   flex-direction: column;
+  gap: 3rem;
+}
+
+.about-paragraph {
+  font-size: 1.2rem;
+  color: var(--text);
+  line-height: 1.8;
+  font-weight: 400;
+  margin: 0;
+}
+
+.about-link {
+  color: var(--neon-green);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.about-link:hover {
+  color: var(--neon-blue);
+  text-decoration: underline;
+}
+
+.about-navigation {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 2px solid rgba(126, 198, 153, 0.2);
+}
+
+.nav-prompt {
+  font-family: "MesloLGS NF", monospace;
+  font-size: 1.1rem;
+  color: var(--neon-blue);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
   gap: 0.5rem;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid rgba(126, 198, 153, 0.2);
-}
-
-.info-item:last-child {
-  border-bottom: none;
-}
-
-.info-label {
+  padding: 0.8rem 1.5rem;
+  background: rgba(126, 198, 153, 0.1);
+  border: 2px solid var(--neon-green);
+  border-radius: 8px;
+  color: var(--neon-green);
+  text-decoration: none;
   font-family: "MesloLGS NF", monospace;
   font-size: 1rem;
-  color: var(--neon-blue);
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  min-width: 160px;
+  justify-content: center;
 }
 
-.info-value {
+.nav-btn:hover {
+  background: var(--neon-green);
+  color: var(--bg);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(126, 198, 153, 0.3);
+}
+
+.nav-btn i {
   font-size: 1.1rem;
-  color: var(--text);
-  line-height: 1.6;
-  font-weight: 400;
 }
 
 /* Contact Section */
@@ -929,9 +972,20 @@ main {
     font-size: 1.2rem;
   }
 
-  /* Info grid responsive */
-  .info-item {
-    padding: 1rem 0;
+  /* About section responsive */
+  .about-paragraph {
+    font-size: 1.1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav-btn {
+    width: 100%;
+    max-width: 200px;
   }
 
   .contact-item {

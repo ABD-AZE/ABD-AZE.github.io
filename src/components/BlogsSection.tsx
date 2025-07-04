@@ -36,35 +36,19 @@ const BlogsSection: React.FC = () => {
   const blogs: Blog[] = [
     {
       id: 1,
+      title: "Building Decentralized Peer Discovery with libp2p",
+      date: "July 01, 2025",
+      description:
+        "How Braidpool leverages libp2p for robust P2P networking.",
+      url: "/blog/libp2p-peer-discovery",
+    },
+    {
+      id: 2,
       title: "Group Theory Unmasked: Building Zero-Knowledge from Symmetry",
       date: "April 21, 2025",
       description:
         "An intuitive guide to the algebra that makes proving without revealing possible.",
       url: "/blog/group-theory",
-    },
-    {
-      id: 2,
-      title: "How to Build a Terminal Portfolio Website",
-      date: "June 15, 2025",
-      description:
-        "A comprehensive guide to creating a cyberpunk-themed portfolio using HTML, CSS, and JavaScript with terminal aesthetics.",
-      url: "#",
-    },
-    {
-      id: 3,
-      title: "Zero Knowledge Proofs: A Gentle Introduction",
-      date: "May 10, 2025",
-      description:
-        "Understanding the fundamentals of zero-knowledge cryptography and its applications in modern blockchain technology.",
-      url: "#",
-    },
-    {
-      id: 4,
-      title: "Competitive Programming Tips for Beginners",
-      date: "April 1, 2025",
-      description:
-        "Essential strategies and techniques to excel in competitive programming contests and improve problem-solving skills.",
-      url: "#",
     },
   ];
 

@@ -7,6 +7,7 @@ import ContactSection from "./components/ContactSection";
 import ProjectsSection from "./components/ProjectsSection";
 import BlogsSection from "./components/BlogsSection";
 import GroupTheoryPost from "./components/GroupTheoryPost";
+import LibP2PPost from "./components/LibP2PPost";
 import "./App.css";
 
 const App: React.FC = () => {
@@ -54,6 +55,15 @@ const App: React.FC = () => {
             <>
               <Navbar />
               <GroupTheoryPost />
+            </>
+          }
+        />
+        <Route
+          path="/blog/libp2p-peer-discovery"
+          element={
+            <>
+              <Navbar />
+              <LibP2PPost />
             </>
           }
         />
