@@ -390,7 +390,7 @@ async fn test_bead_request_handling() {
       title="Lessons in Async Rust from Building BraidPool"
       subtitle="A deep dive into real-world async programming patterns and Tokio best practices"
       author="ABDULLAH AZEEM"
-      date="AUG 20, 2025"
+      date="AUG 22, 2025"
       content={content}
     />
   );
