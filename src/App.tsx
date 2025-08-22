@@ -8,6 +8,7 @@ import ProjectsSection from "./components/ProjectsSection";
 import BlogsSection from "./components/BlogsSection";
 import GroupTheoryPost from "./components/GroupTheoryPost";
 import LibP2PPost from "./components/LibP2PPost";
+import BraidpoolAsyncPost from "./components/BraidpoolAsyncPost";
 import "./App.css";
 
 const App: React.FC = () => {
@@ -55,6 +56,15 @@ const App: React.FC = () => {
             <>
               <Navbar />
               <GroupTheoryPost />
+            </>
+          }
+        />
+        <Route
+          path="/blog/braidpool-async-lessons"
+          element={
+            <>
+              <Navbar />
+              <BraidpoolAsyncPost />
             </>
           }
         />

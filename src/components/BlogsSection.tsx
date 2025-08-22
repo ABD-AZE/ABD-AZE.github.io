@@ -36,6 +36,14 @@ const BlogsSection: React.FC = () => {
   const blogs: Blog[] = [
     {
       id: 1,
+      title: "Lessons in Async Rust from Building BraidPool",
+      date: "August 22, 2025",
+      description:
+        "A deep dive into real-world async programming patterns and Tokio best practices.",
+      url: "/blog/braidpool-async-lessons",
+    },
+    {
+      id: 2,
       title: "Building Decentralized Peer Discovery with libp2p",
       date: "July 01, 2025",
       description:
@@ -43,7 +51,7 @@ const BlogsSection: React.FC = () => {
       url: "/blog/libp2p-peer-discovery",
     },
     {
-      id: 2,
+      id: 3,
       title: "Group Theory Unmasked: Building Zero-Knowledge from Symmetry",
       date: "April 21, 2025",
       description:

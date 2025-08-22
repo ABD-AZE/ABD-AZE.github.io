@@ -50,6 +50,11 @@ const BlogPost: React.FC<BlogPostProps> = ({
         (window as any).MathJax.typeset();
       }
     }
+
+    // Trigger Prism.js syntax highlighting
+    if ((window as any).Prism) {
+      (window as any).Prism.highlightAll();
+    }
   }, []);
 
   return (
