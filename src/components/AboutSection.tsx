@@ -27,7 +27,7 @@ const AboutSection: React.FC = () => (
 
       <div className="about-navigation">
         <p className="nav-prompt">Explore my work:</p>
-        <div className="nav-links">
+        <div className="about-nav-links">
           <Link to="/blogs" className="nav-btn">
             <i className="fas fa-blog"></i>
             Read My Blogs

@@ -33,36 +33,7 @@ const ProjectsSection: React.FC = () => {
     };
   }, [welcomeMessage]);
 
-  const projects: Project[] = [
-    {
-      id: 1,
-      title: "Terminal Portfolio Website",
-      tech: "HTML, CSS, JavaScript",
-      description:
-        "A cyberpunk-themed portfolio website with terminal aesthetics, featuring typing animations and neon color schemes.",
-    },
-    {
-      id: 2,
-      title: "Blockchain Transaction Tracker",
-      tech: "Python, Web3.py, Flask",
-      description:
-        "A real-time blockchain transaction monitoring system with advanced analytics and visualization capabilities.",
-    },
-    {
-      id: 3,
-      title: "Zero Knowledge Proof Library",
-      tech: "Rust, Cryptography",
-      description:
-        "A comprehensive library implementing various zero-knowledge proof protocols for privacy-preserving applications.",
-    },
-    {
-      id: 4,
-      title: "Competitive Programming Solutions",
-      tech: "C++, Algorithms, Data Structures",
-      description:
-        "A collection of optimized solutions to competitive programming problems from various platforms like Codeforces and AtCoder.",
-    },
-  ];
+  const projects: Project[] = [];
 
   return (
     <>
@@ -96,20 +67,26 @@ const ProjectsSection: React.FC = () => {
             <div className="projects-section">
               <h1 className="section-title">My Projects</h1>
               <div className="project-grid">
-                {projects.map((project) => (
-                  <div key={project.id} className="project-item">
-                    <a
-                      href="#"
-                      className="project-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {project.title}
-                    </a>
-                    <span className="project-tech">{project.tech}</span>
-                    <p className="project-description">{project.description}</p>
+                {projects.length === 0 ? (
+                  <div className="empty-state">
+                    <p>No projects to display at the moment. Check back soon!</p>
                   </div>
-                ))}
+                ) : (
+                  projects.map((project) => (
+                    <div key={project.id} className="project-item">
+                      <a
+                        href="#"
+                        className="project-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {project.title}
+                      </a>
+                      <span className="project-tech">{project.tech}</span>
+                      <p className="project-description">{project.description}</p>
+                    </div>
+                  ))
+                )}
               </div>
             </div>
           </section>

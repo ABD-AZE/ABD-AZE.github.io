@@ -361,7 +361,7 @@ main {
   font-weight: 600;
 }
 
-.nav-links {
+.about-nav-links {
   display: flex;
   gap: 2rem;
   justify-content: center;
@@ -623,9 +623,16 @@ main {
   opacity: 0.9;
 }
 
-/* Projects Section Styles */
+/* Projects Section */
 .projects-section {
-  margin-bottom: 5rem;
+  padding: 2rem 0;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
 }
 
 .project-grid {
@@ -885,7 +892,7 @@ main {
 
   .nav-links {
     position: fixed;
-    top: 100%;
+    top: 60px;
     left: 0;
     width: 100%;
     background: rgba(24, 24, 24, 0.98);
